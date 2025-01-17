@@ -3,7 +3,7 @@ const canvas = document.getElementById("pong");
 const ctx = canvas.getContext("2d");
 
 // SETTING
-const paddleWidth = 10, paddleHeight = 80, ballSize = 10;
+const paddleWidth = 10, paddleHeight = 80, ballSize = 8;
 let ballSpeedX = 2, ballSpeedY = 2;
 let playerSpeed = 2;
 
@@ -33,6 +33,7 @@ function drawBall() {
     ctx.fill();  
     
 }
+
 function drawRect(x, y, w, h, color){
     ctx.fillStyle = color;
     ctx.fillRect(x, y, w, h);
@@ -42,7 +43,7 @@ const net = {
     y: 0,
     width: 10,
     height: 35,
-    color: 'white'
+    color: 'blue',
 }
 // MOVEMENT AND COLLISION
 function moveBall() {
