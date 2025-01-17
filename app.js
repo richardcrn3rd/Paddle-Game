@@ -25,9 +25,13 @@ function drawPaddles() {
     ctx.fillRect(0, leftPaddleY, paddleWidth, paddleHeight);  // Left paddle
     ctx.fillRect(canvas.width - paddleWidth, rightPaddleY, paddleWidth, paddleHeight); // Right paddle
 }
+// BALL
 function drawBall() {
-    ctx.fillStyle = "red";
-    ctx.fillRect(ballX, ballY, ballSize, ballSize);
+    ctx.fillStyle = "red";  
+    ctx.beginPath();  
+    ctx.arc(ballX, ballY, ballSize, 0, Math.PI * 2);  // Draw a circle (arc)
+    ctx.fill();  
+    
 }
 function drawRect(x, y, w, h, color){
     ctx.fillStyle = color;
