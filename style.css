@@ -9,17 +9,26 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #1d8d95;
+    background-color: #1d9581;
     font-family: Arial, sans-serif;
 }
 
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+}
 .game-container {
     position: relative;
-    display: flex;
+    display:flex;
     justify-content: center;
     align-items: center;
+
 }
 
 canvas {
-    border: 2px solid rgb(170, 38, 38);
+    border: 2px solid rgb(207, 17, 17);
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+
 }
