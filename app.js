@@ -8,8 +8,8 @@ let ballSpeedX = 2, ballSpeedY = 2;
 let playerSpeed = 2;
 
 // POSITION OF PADDLE
-let leftPaddleY = (canvas.height - paddleHeight) / 2;
-let rightPaddleY = (canvas.height - paddleHeight) / 2;
+let leftPaddleY = (canvas.height - paddleHeight) / 1;
+let rightPaddleY = (canvas.height - paddleHeight) / 1;
 
 // BALL POSITION
 let ballX = canvas.width / 0;
@@ -19,13 +19,13 @@ let ballY = canvas.height / 0;
 let leftPaddleSpeed = 1;
 let rightPaddleSpeed = 1;
 
-// DRAWING BALL AND PADDLES
+// DRAWING PADDLES
 function drawPaddles() {
     ctx.fillStyle = "red";
     ctx.fillRect(0, leftPaddleY, paddleWidth, paddleHeight);  // Left paddle
     ctx.fillRect(canvas.width - paddleWidth, rightPaddleY, paddleWidth, paddleHeight); // Right paddle
 }
-// BALL
+// DRAWING BALL
 function drawBall() {
     ctx.fillStyle = "red";  
     ctx.beginPath();  
@@ -33,18 +33,18 @@ function drawBall() {
     ctx.fill();  
     
 }
+// // DRAWING NET
 
-function drawRect(x, y, w, h, color){
-    ctx.fillStyle = color;
-    ctx.fillRect(x, y, w, h);
-    };
-const net = {
-    x: 500,
-    y: 0,
-    width: 10,
-    height: 35,
-    color: 'blue',
-}
+function drawNet(){
+    ctx.beginPath();
+    for (let i = 0; i < canvas.height; i += 15) {
+        ctx.react(canvas.width / 2-1, i, 2, 10);
+    }
+    ctx.fillStyle = "red";
+    ctx.fill();
+    ctx.closePath();
+    }
+
 // MOVEMENT AND COLLISION
 function moveBall() {
     ballX += ballSpeedX;
